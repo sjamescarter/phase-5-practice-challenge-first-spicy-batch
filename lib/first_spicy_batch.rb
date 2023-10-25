@@ -4,5 +4,11 @@
 # def is_spicy_batch(batch):
 
 def first_spicy_batch(n)
-  # your code here
+  if is_spicy_batch(n)
+    first_spicy_batch(n - 1)
+  elsif is_spicy_batch(n + 1) 
+    return n + 1
+  else
+    first_spicy_batch(n + 1)
+  end
 end

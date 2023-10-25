@@ -16,7 +16,7 @@ describe '#first_spicy_batch' do
     def is_spicy_batch(batch)
       batch >= 8
     end
-    expect(first_spicy_batch(8)).to eq(8)
+    expect(first_spicy_batch(6)).to eq(8)
     expect(first_spicy_batch(9)).to eq(8)
     expect(first_spicy_batch(10)).to eq(8)
     expect(first_spicy_batch(11)).to eq(8)
@@ -36,6 +36,7 @@ describe '#first_spicy_batch' do
     def is_spicy_batch(batch)
       batch >= 100
     end
+    expect(first_spicy_batch(50)).to eq(100)
     expect(first_spicy_batch(100)).to eq(100)
     expect(first_spicy_batch(8000)).to eq(100)
   end
